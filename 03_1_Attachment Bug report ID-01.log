@@ -1,0 +1,39 @@
+2023-03-10 11:36:11.122  4739-4739  android.notepa          com.example.android.notepad          I  GetResourceLocales CollectLocales 
+2023-03-10 11:36:11.123  4739-4739  chatty                  com.example.android.notepad          I  uid=10051(com.example.android.notepad) identical 2 lines
+2023-03-10 11:36:11.123  4739-4739  android.notepa          com.example.android.notepad          I  GetResourceLocales CollectLocales 
+2023-03-10 11:36:11.342  4739-4739  WindowClient            com.example.android.notepad          D  Add to mViews: android.widget.PopupWindow$PopupDecorView{52bd7ae V.E...... R.....I. 0,0-0,0}, this = android.view.WindowManagerGlobal@8e62103mViews.size()=2
+2023-03-10 11:36:11.530  4739-4739  gralloc                 com.example.android.notepad          I  gralloc_register_buffer hnd=0x9f80ba40, share_fd=56, share_attr_fd=-1, magic=51647890, format=1, internal_format=1, byte_stride=1280, flags=4, usage=0x933, size=302080, width=318, height=236, internalWidth=318, internalHeight=236, stride=320, base=0x9fbae000, writeOwner=0, attr_base=0xffffffff, yuv_info=1, fd=-1, buf_idx=0, offset=0, min_pgsz=4096, phyaddr=0
+2023-03-10 11:36:11.589  4739-4739  gralloc                 com.example.android.notepad          I  gralloc_register_buffer hnd=0x9f80bc80, share_fd=61, share_attr_fd=-1, magic=51647890, format=1, internal_format=1, byte_stride=1280, flags=4, usage=0x933, size=302080, width=318, height=236, internalWidth=318, internalHeight=236, stride=320, base=0x9f886000, writeOwner=0, attr_base=0xffffffff, yuv_info=1, fd=-1, buf_idx=0, offset=0, min_pgsz=4096, phyaddr=0
+2023-03-10 11:36:11.611  4739-4739  gralloc                 com.example.android.notepad          I  gralloc_register_buffer hnd=0x9f80bd40, share_fd=62, share_attr_fd=-1, magic=51647890, format=1, internal_format=1, byte_stride=1280, flags=4, usage=0x933, size=302080, width=318, height=236, internalWidth=318, internalHeight=236, stride=320, base=0x9c3e1000, writeOwner=0, attr_base=0xffffffff, yuv_info=1, fd=-1, buf_idx=0, offset=0, min_pgsz=4096, phyaddr=0
+2023-03-10 11:36:13.492  4739-4739  AndroidRuntime          com.example.android.notepad          D  Shutting down VM
+2023-03-10 11:36:13.504  4739-4739  AndroidRuntime          com.example.android.notepad          E  FATAL EXCEPTION: main
+                                                                                                    Process: com.example.android.notepad, PID: 4739
+                                                                                                    android.util.AndroidRuntimeException: Calling startActivity() from outside of an Activity  context requires the FLAG_ACTIVITY_NEW_TASK flag. Is this really what you want?
+                                                                                                    	at android.app.ContextImpl.startActivity(ContextImpl.java:912)
+                                                                                                    	at android.app.ContextImpl.startActivity(ContextImpl.java:888)
+                                                                                                    	at android.content.ContextWrapper.startActivity(ContextWrapper.java:379)
+                                                                                                    	at android.content.ContextWrapper.startActivity(ContextWrapper.java:379)
+                                                                                                    	at com.android.internal.view.menu.MenuItemImpl.invoke(MenuItemImpl.java:159)
+                                                                                                    	at com.android.internal.view.menu.MenuBuilder.performItemAction(MenuBuilder.java:923)
+                                                                                                    	at com.android.internal.view.menu.MenuBuilder.performItemAction(MenuBuilder.java:913)
+                                                                                                    	at com.android.internal.view.menu.MenuPopup.onItemClick(MenuPopup.java:128)
+                                                                                                    	at android.widget.AdapterView.performItemClick(AdapterView.java:318)
+                                                                                                    	at android.widget.AbsListView.performItemClick(AbsListView.java:1159)
+                                                                                                    	at android.widget.AbsListView$PerformClick.run(AbsListView.java:3136)
+                                                                                                    	at android.widget.AbsListView$3.run(AbsListView.java:4052)
+                                                                                                    	at android.os.Handler.handleCallback(Handler.java:873)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:99)
+                                                                                                    	at android.os.Looper.loop(Looper.java:192)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:7163)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:504)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:858)
+2023-03-10 11:36:13.506  4739-4739  HprofFactory            com.example.android.notepad          D  Create HprofDebugEx
+2023-03-10 11:36:13.523   677-1998  ActivityManager         system_server                        W    Force finishing activity com.example.android.notepad/.NotesList
+2023-03-10 11:36:13.543  4739-4739  Process                 com.example.android.notepad          I  Sending signal. PID: 4739 SIG: 9
+2023-03-10 11:36:13.605   677-786   InputDispatcher         system_server                        W  channel '5fd237e com.example.android.notepad/com.example.android.notepad.NotesList (server)' ~ Consumer closed input channel or an error occurred.  events=0x9
+2023-03-10 11:36:13.605   677-786   InputDispatcher         system_server                        E  channel '5fd237e com.example.android.notepad/com.example.android.notepad.NotesList (server)' ~ Channel is unrecoverably broken and will be disposed!
+2023-03-10 11:36:13.608   677-1414  WindowManager           system_server                        I  WIN DEATH: Window{5fd237e u0 com.example.android.notepad/com.example.android.notepad.NotesList}
+2023-03-10 11:36:13.608   677-1414  InputDispatcher         system_server                        W  Attempted to unregister already unregistered input channel '5fd237e com.example.android.notepad/com.example.android.notepad.NotesList (server)'
+2023-03-10 11:36:13.610   677-960   ActivityManager         system_server                        I  Process com.example.android.notepad (pid 4739) has died: vis  +99TOP 
+2023-03-10 11:36:13.628   316-453   SurfaceFlinger          surfaceflinger                       W  Attempting to destroy on removed layer: AppWindowToken{7f79e88 token=Token{ff80a2b ActivityRecord{dbc227a u0 com.example.android.notepad/.NotesList t75}}}#0
